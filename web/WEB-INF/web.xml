@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!---  Todas as Servelet !-->
+    <servlet>
+        <servlet-name>ControleExameFisico</servlet-name>
+        <servlet-class>Controle.ControleExameFisico</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControlePessoal</servlet-name>
+        <servlet-class>Controle.ControlePessoal</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControleTreino</servlet-name>
+        <servlet-class>Controle.ControleTreino</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControleUsuario</servlet-name>
+        <servlet-class>Controle.ControleUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControleAvaliacaoFisica</servlet-name>
+        <servlet-class>Controle.ControleAvaliacaoFisica</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControleMatricula</servlet-name>
+        <servlet-class>Controle.ControleMatricula</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControlePersonal</servlet-name>
+        <servlet-class>Controle.ControlePersonal</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControleAtleta</servlet-name>
+        <servlet-class>Controle.ControleAtleta</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControleExameFisico</servlet-name>
+        <url-pattern>/ControleExameFisico</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControlePessoal</servlet-name>
+        <url-pattern>/ControlePessoal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControleTreino</servlet-name>
+        <url-pattern>/ControleTreino</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControleUsuario</servlet-name>
+        <url-pattern>/ControleUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControleAvaliacaoFisica</servlet-name>
+        <url-pattern>/ControleAvaliacaoFisica</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Parametro Filtro Personal -->
+    <filter>
+        <filter-name>FiltroPersonal</filter-name>
+        <filter-class>Filtro.FiltroPersonal</filter-class>
+    </filter>
+    <!-- Mapeando o Filtro Personal em todas as Pastas PERSONAL -->
+     <filter-mapping>
+        <filter-name>FiltroPersonal</filter-name>
+        <url-pattern>/Personal/*</url-pattern>
+    </filter-mapping>
+    
+    
+    <!-- Parametro Filtro Atleta -->
+    <filter>
+        <filter-name>FiltroAtleta</filter-name>
+        <filter-class>Filtro.FiltroAtleta</filter-class>
+    </filter>
+    <!-- Mapeamento o Filtro Atleta em todas Pastas Atleta -->
+     <filter-mapping>
+        <filter-name>FiltroAtleta</filter-name>
+        <url-pattern>/Atleta/*</url-pattern>
+    </filter-mapping>
+   
+    <!-- Parametro Filtro Matricula -->
+    <servlet-mapping>
+        <servlet-name>ControleMatricula</servlet-name>
+        <url-pattern>/ControleMatricula</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ControlePersonal</servlet-name>
+        <url-pattern>/ControlePersonal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControleAtleta</servlet-name>
+        <url-pattern>/ControleAtleta</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+    </web-app>
